@@ -48,6 +48,6 @@ Ridge Street provides real estate financing solutions including fix-and-flip, re
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/Faiaz98/ridge-street.git
+git clone https://github.com/Faiaz98/ridge-street-task.git
 cd ridge-street
 npm install
