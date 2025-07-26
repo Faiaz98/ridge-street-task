@@ -1,0 +1,13 @@
+    {
+      "compilerOptions": {
+        "allowJs": true, // Allows inclusion of .js files in compilation
+        "outDir": "./dist", // Output directory for compiled JavaScript
+        "rootDir": "./src", // Root directory of your source files
+        "esModuleInterop": true, // Enables better interoperability with CommonJS modules
+        "strict": false, // Start with less strictness, gradually enable more strict options
+        "target": "es2016", // Target JavaScript version
+        "module": "commonjs" // Module system to use
+      },
+      "include": ["src/**/*"], // Include all files in the src directory
+      "exclude": ["node_modules"] // Exclude node_modules
+    }

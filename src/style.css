@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "tailwindcss";
+
+html,
+body {
+  font-family: "Inter", sans-serif;
+}
+@theme {
+  --color-main: #0D4022;
+  --color-light-gray: #343434;
+  --color-light-slate: #949293;
+  --color-icon-bg: #eefff5;
+  --color-dark-bg: #02030b;
+}
+.demo {
+  --color-main: #0D4022;
+  --color-light-gray: #333333;
+  --color-dark-bg: #949293;
+  --color-dark-bg: #eefff5;
+  --color-dark-bg: #02030b;
+}
+
+@layer components {
+  .container {
+    @apply mx-auto px-2 md:px-5;
+  }
+  .primary-btn {
+    @apply bg-main shadow-light-gray/30 hover:bg-light-gray rounded-lg px-5 py-2.5 text-white uppercase shadow-lg transition-colors duration-200;
+  }
+  
+  .animated-btn {
+    @apply bg-main relative shadow-xl shadow-light-gray/50 flex w-fit items-center justify-between gap-4 rounded-tl-md rounded-bl-md px-3 py-3 font-semibold text-white uppercase transition-all duration-150 md:px-5 md:py-4;
+  }
+  .animated-btn .skew-icon-content {
+    @apply group-hover:bg-main  border-main absolute top-0 -right-[10px] flex h-full w-[50px] -skew-x-12 items-center justify-center rounded-tr-md rounded-br-md border-4 bg-white duration-200;
+  }
+  .animated-btn .skew-icon {
+    @apply text-main h-8 w-8 skew-x-12 duration-200 group-hover:text-white md:h-10 md:w-10;
+  }
+  .animated-btn-reverse {
+    @apply text-main bg-white relative shadow-xl shadow-light-gray/70 flex w-fit items-center justify-between gap-2 rounded-tl-md rounded-bl-md  px-3 py-3 font-semibold uppercase transition-all duration-150 md:px-5 md:py-4;
+  }
+  .animated-btn-reverse .skew-icon-content {
+    @apply bg-main absolute top-0 -right-[10px] flex h-full w-[50px] -skew-x-12 items-center justify-center rounded-tr-md rounded-br-md border-4 border-white duration-200 group-hover:bg-white;
+  }
+  .animated-btn-reverse .skew-icon {
+    @apply group-hover:text-main h-8 w-8 skew-x-12 text-white duration-200 md:h-10 md:w-10;
+  }
+}
+@layer utilities {
+  .container {
+    @apply max-w-[1280px];
+  }
+}
